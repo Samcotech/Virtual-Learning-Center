@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head lang="en" >
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body na-app="teacher" ng-controller="homeController">
+<div id="sidebar" style="width: 25%;height:auto;right: 0px;float: right;border: 1px solid #000000;margin-top: 5%;margin-right: 10%;">
+    <div id="userlist" style="width: auto;border-bottom: 1px solid #000000;">
+        <span>{{teacher.firstname}}</span><br>
+        <span>Alex (Student)</span><br>
+    </div>
+    <div id="videos"  style="border-bottom: 1px solid #000000;height: 30%">
+        <div id="remote_user">
+            <video id="remotevid" width="100%" ></video>
+        </div>
+        <div id="local">
+            <video id="localvid" width="50%" style="margin-left: 50%;"></video>
+        </div>
+    </div>
+    <div id="video_buttons" style="margin-left: 10px;">
+        <button id="video_on" style="width: 45%;">Turn Video On</button>
+        <button id="audio_on" style="width: 45%;">Turn Audio On</button>
+    </div>
+    <div id="chat_box" style="width: 100%;height: 30%;border: 1px solid #000000;">
+        <div id="messages" style="border-bottom: 1px solid #000000;height: 30%;" >
+            <span>Rahul (Cauch)</span><br>
+            <span>Alex (Student)</span><br>
+        </div>
+        <div id="text">
+            <textarea id="sendmsg" ></textarea>
+            <button id="send" style="position: absolute;">Send</button>
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="angular.min.js"></script>
+<script src="angular-route.js"></script>
+<script src="adapter.js"></script>
+<script src="app/teacher-app.js"></script>
+<script src="teacher_controller.js"></script>
+<script src="app/router/teacher_route.js"></script>
+
+</body>
+
+</html>
